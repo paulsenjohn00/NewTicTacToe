@@ -6,19 +6,19 @@ namespace TicTacToe
 {
     class TurnDoer
     {
-        public byte ErrorCatcher(byte[] gameBoard)
+        public int ErrorCatcher(int[] gameBoard)
         {
-            byte turn = Turn(gameBoard);
+            int turn = Turn(gameBoard);
             return turn;
         }
-        public byte Turn(byte[] gameBoard)
+        public int Turn(int[] gameBoard)
         {
-            byte convertedTurn = 10;
+            int convertedTurn = 10;
             Console.Write("Enter your next move: ");
             string playerTurn = Console.ReadLine();
             try
             {
-                convertedTurn = Convert.ToByte(playerTurn);
+                convertedTurn = Convert.ToInt32(playerTurn);
                 if (convertedTurn > 9 || convertedTurn < 1)
                 {
                     Console.WriteLine("Oops! That's not a square you can choose. Enter a number between 1 and 9");

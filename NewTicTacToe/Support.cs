@@ -152,11 +152,11 @@ namespace TicTacToe
         {
             if (key == 2)
             {
-                Console.WriteLine("o Wins!\n Thanks for Playing!");
+                Console.WriteLine("o Wins!\nThanks for Playing!\n");
             }
             else
             {
-                Console.WriteLine("x Wins!\n Thanks for Playing!");
+                Console.WriteLine("x Wins!\nThanks for Playing!\n");
             }
         }
     }

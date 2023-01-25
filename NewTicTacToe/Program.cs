@@ -6,26 +6,30 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to group 2-6's Tic-Tac-Toe Game!");
+            Console.WriteLine("Welcome to group 2-6's Tic-Tac-Toe Game!\n");
 
             TurnDoer td = new TurnDoer();
-            CheckWin cw = new CheckWin();
-            byte[] gameBoard = new byte[9];
-            byte playerTurn;
+            Support s = new Support();
+            int[] gameBoard = new int[9];
+            int playerTurn;
 
 
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 10; i++)
             {
                 // Print Board goes here later
+                s.DisplayBoard(gameBoard);
                 // Checks for each player win
-                if (cw.WinCheck(gameBoard, 1) == true)
+                if (s.CheckBoard(gameBoard) == true)
                 {
-                    Console.WriteLine("Congradulations player 1! You won!");
                     break;
                 }
-                else if (cw.WinCheck(gameBoard, 2) == true)
+                else if (s.CheckBoard(gameBoard) == true)
                 {
-                    Console.WriteLine("Congradulations player 2! You won!");
+                    break;
+                }
+                else if (i == 9)
+                {
+                    Console.WriteLine("It's a draw!");
                     break;
                 }
                 else
