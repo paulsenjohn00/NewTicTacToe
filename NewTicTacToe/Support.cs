@@ -148,15 +148,15 @@ namespace TicTacToe
                 return "*";
             }
         }
-        protected string PrintWinner(int key)
+        protected void PrintWinner(int key)
         {
             if (key == 2)
             {
-                return "o Wins!\n Thanks for Playing!";
+                Console.WriteLine("o Wins!\n Thanks for Playing!");
             }
             else
             {
-                return "x Wins!\n Thanks for Playing!";
+                Console.WriteLine("x Wins!\n Thanks for Playing!");
             }
         }
     }
