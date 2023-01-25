@@ -47,6 +47,7 @@ namespace TicTacToe
 
                         if (boardArray[0] == boardArray[2])
                         {
+                            PrintWinner(boardArray[0]);
                             //PRINT WINNER
                             return true;
                         }
@@ -61,6 +62,7 @@ namespace TicTacToe
                     {
                         if (boardArray[0] == boardArray[6])
                         {
+                            PrintWinner(boardArray[0]);
                             return true;
                         }
                         //else
@@ -73,6 +75,7 @@ namespace TicTacToe
                     {
                         if (boardArray[0] == boardArray[8])
                         {
+                            PrintWinner(boardArray[0]);
                             return true;
                         }
                     }
@@ -87,6 +90,7 @@ namespace TicTacToe
                     if (boardArray[3] == boardArray[4] && boardArray[3] == boardArray[5])
 
                     {
+                        PrintWinner(boardArray[3]);
                         return true;
                     }
                 }
@@ -96,6 +100,7 @@ namespace TicTacToe
                     if (boardArray[6] == boardArray[7] && boardArray[6] == boardArray[8])
 
                     {
+                        PrintWinner(boardArray[6]);
                         return true;
                     }
                 }
@@ -105,6 +110,7 @@ namespace TicTacToe
                     if (boardArray[1] == boardArray[4] && boardArray[1] == boardArray[7])
 
                     {
+                        PrintWinner(boardArray[1]);
                         return true;
                     }
                 }
@@ -113,10 +119,12 @@ namespace TicTacToe
                 {
                     if (boardArray[2] == boardArray[5] && boardArray[2] == boardArray[8])
                     {
+                        PrintWinner(boardArray[2]);
                         return true;
                     }
                     if (boardArray[2] == boardArray[4] && boardArray[2] == boardArray[6])
                     {
+                        PrintWinner(boardArray[2]);
                         return true;
                     }
                 }
@@ -138,6 +146,17 @@ namespace TicTacToe
             else
             {
                 return "*";
+            }
+        }
+        protected string PrintWinner(int key)
+        {
+            if (key == 2)
+            {
+                return "o Wins!\n Thanks for Playing!";
+            }
+            else
+            {
+                return "x Wins!\n Thanks for Playing!";
             }
         }
     }
